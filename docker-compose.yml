@@ -1,0 +1,22 @@
+name: supabase-assets
+
+services:
+  assets:
+    image: nginx:alpine
+    container_name: supabase-assets
+    restart: unless-stopped
+    ports:
+      - 5050:80
+    networks:
+      - rootedfaith
+    volumes:
+      - ${PWD}:/usr/share/nginx/html:ro
+      - ${PWD}/entrypoint.sh:/entrypoint.sh:ro
+      - ${PWD}/render-emails.sh:/render-emails.sh:ro
+    environment:
+      - PUBLIC_URL=https://assets.rootedfaith.com
+    entrypoint: ["/entrypoint.sh"]
+networks:
+  rootedfaith:
+    external: true
+
