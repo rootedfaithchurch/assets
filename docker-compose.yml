@@ -14,7 +14,8 @@ services:
       - ${PWD}/entrypoint.sh:/entrypoint.sh:ro
       - ${PWD}/render-emails.sh:/render-emails.sh:ro
     environment:
-      - PUBLIC_URL=https://assets.rootedfaith.com
+      - PUBLIC_URL=https://assets.rootedfaithchurch.org
+      - FACEBOOK_URL=https://www.facebook.com/search/top?q=rooted%20faith%20church
     entrypoint: ["/entrypoint.sh"]
 networks:
   rootedfaith:
