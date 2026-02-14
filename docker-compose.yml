@@ -16,6 +16,7 @@ services:
     environment:
       - PUBLIC_URL=https://assets.rootedfaithchurch.org
       - FACEBOOK_URL=https://www.facebook.com/search/top?q=rooted%20faith%20church
+      - INSTAGRAM_URL=https://www.instagram.com/rootedfaithchurch
     entrypoint: ["/entrypoint.sh"]
 networks:
   rootedfaith:
